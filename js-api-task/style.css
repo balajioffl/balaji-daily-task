@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: lato, sans-serif;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+  letter-spacing: 2px;
+}
+
+body {
+  background-color: #cacffa;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.quoteDiv {
+  background-color: #ffffff;
+  border-left: 4px solid #007bff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 28%;
+  min-width: 350px;
+  min-height: 250px;
+  line-height: 1.8;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.quoteDiv:hover {
+  transform: translateY(-5px);
+}
+
+.quoteDiv p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.quoteDiv h3 {
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+button {
+  padding: 8px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 30%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:last-child {
+  background-color: #dc3545;
+}
+
+button:last-child:hover {
+  background-color: #b02a37;
+}
