@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+
+    <h1>Welcome</h1>
+    <button id="add">Add user</button>
+    <button id="delete">Clear user</button>
+
+<script>
+
+    var btn = document.querySelector("#add");
+    var title = document.querySelector("h1");
+    var del = document.querySelector("#delete");
+
+    del.addEventListener('click',() => {
+        localStorage.clear( )
+    })
+
+    btn.addEventListener('click',()=>{
+        userDetails();
+    })
+
+    function userDetails(){
+       var name = prompt("Enter your name");
+       localStorage.setItem("username",name);
+       title.textContent = "Welcome " + name;
+    }
+
+    if(!localStorage.getItem("username")){
+        userDetails();
+    }
+
+    else{
+       var name = localStorage.getItem("username",name);
+       title.textContent = "Welcome " + name;
+    }
+
+
+</script>
+
+</body>
+</html>
