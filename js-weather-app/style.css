@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem;
+}
+
+.weather-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.weather-box h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #4d4c4c;
+  letter-spacing: 2px;
+}
+
+#city {
+  width: 90%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+#city:focus {
+  border-color: #7cb8f7;
+}
+
+#search {
+  background-color: #7cb8f7;
+  color: rgb(39, 39, 39);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  letter-spacing: 2px;
+}
+
+#search:hover {
+  background-color: #5ca2f0;
+}
+
+#weather-result {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  width: 100%;
+  margin-top: 15px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+#weather-result p {
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  padding: 8px 10px;
+  width: 100%;
+  max-width: 150px;
+  font-size: 0.8rem;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#weather-result h1 {
+  grid-column: 1 / -1;
+  color: #515151;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#weather-result img {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 90px;
+  height: 90px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+
+  .weather-box {
+    max-width: 100%;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  #city {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  #search {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  #weather-result {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  #weather-result h1 {
+    font-size: 1.1rem;
+  }
+
+  #weather-result p {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+
+  #weather-result img {
+    width: 70px;
+    height: 70px;
+  }
+  
+}
