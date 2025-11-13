@@ -14,7 +14,6 @@ def note_create(request):
         author = request.POST.get('author')
         Note.objects.create(title=title, notes=notes, author=author)
         return redirect('note_list')
-    return render(request, 'notes/note_form.html')
 
 def note_update(request,pk):
     note = get_object_or_404(Note,pk=pk)
@@ -24,14 +23,12 @@ def note_update(request,pk):
         note.author = request.POST.get('author')
         note.save()
         return redirect('note_list')
-    return render(request, 'notes/note_form.html', {'note': note})
 
 def note_delete(request,pk):
     note = get_object_or_404(Note, pk=pk)
     if request.method == 'POST':
         note.delete()
         return redirect('note_list')
-    return render(request, 'notes/note_delete_conform.html', {'note': note})
 
 
         
